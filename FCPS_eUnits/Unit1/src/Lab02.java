@@ -1,86 +1,66 @@
 import edu.fcps.karel2.Display;
 import edu.fcps.karel2.Robot;
 
-
-
-
-
 public class Lab02 {
-   
-
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Display.openWorld("../maps/school.map");
-      Display.setSize(10,10);
-      Display.setSpeed(5);
+		Display.openWorld("../maps/maze.map");
+      Display.setSize(8,8);
+      Display.setSpeed(10);
       
-		Robot lisa = new Robot();
-		Robot pete = new Robot(4, 5, Display.SOUTH, 0);
+		Athlete maria = new Athlete(1,1,Display.NORTH,20);
       
-      lisa.move();
-      lisa.move();
-      lisa.turnLeft();
-      lisa.move();
-      lisa.turnLeft();
-      lisa.move();
-      lisa.pickBeeper();
-      lisa.turnLeft();
-      lisa.turnLeft();
-      lisa.move();
-      lisa.turnLeft();
-      lisa.turnLeft();
-      lisa.turnLeft();
-      lisa.move();
-      lisa.turnLeft();
-      lisa.move();
-      lisa.move();
-      lisa.move();
-      lisa.turnLeft();
-      lisa.move();
-      lisa.move();
-      lisa.move();
-      lisa.turnLeft();
-      lisa.move();
-      lisa.move();
-      lisa.turnLeft();
-      lisa.turnLeft();
-      lisa.turnLeft();
-      lisa.move();
-      lisa.putBeeper();
-      pete.pickBeeper();
-      pete.move();
-      pete.turnLeft();
-      pete.move();
-      pete.move();
-      pete.turnLeft();
-      pete.move();
-      pete.move();
-      pete.turnLeft();
-      pete.turnLeft();
-      pete.turnLeft();
-      pete.move();
-      pete.move();
-      pete.turnLeft();
-      pete.move();
-      pete.turnLeft();
-      pete.move();
-      pete.move();
-      pete.turnLeft();
-      pete.turnLeft();
-      pete.turnLeft();
-      pete.move();
-      pete.move();
-      pete.turnLeft();
-      pete.move();
-      pete.move();
-      pete.putBeeper();
-      pete.turnLeft();
-      pete.turnLeft();
-      pete.move();
+      maria.putBeeper();
+      maria.move();
+      maria.turnRight();
+      maria.putBeeper();
+      maria.move();
+      maria.turnRight();
+      maria.putBeeper();
+      maria.move();
+      maria.turnLeft();
+      maria.putBeeper();
+      maria.move();
+      maria.turnLeft();
+      maria.putBeeper();
+      maria.move();
+      maria.turnRight();
+      maria.putBeeper();
+      maria.move();
+      maria.turnLeft();
+      maria.putBeeper();
+      maria.move();
+      maria.turnLeft();
+      maria.putBeeper();
+      maria.move();
+      maria.turnRight();
+      maria.putBeeper();
+      maria.move();
+      maria.turnRight();
+      maria.putBeeper();
+      maria.move();
+      maria.putBeeper();
+      maria.move();
+      maria.turnRight();
+      maria.putBeeper();
+      maria.move();
+      maria.turnLeft();
+      maria.putBeeper();
+      maria.move();
+      maria.turnLeft();
+      maria.putBeeper();
+      maria.move();
+      maria.putBeeper();
+      maria.move();
+      maria.turnRight();
+      maria.putBeeper();
+      maria.move();
+      maria.putBeeper();
+      maria.move();
    
 	}
 
