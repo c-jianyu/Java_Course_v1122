@@ -9,7 +9,7 @@ public class Lab00 {
 //565
 		Display.openWorld("../maps/first.map");
       Display.setSize(10,10);
-      Display.setSpeed(5);
+      Display.setSpeed(10);
       
 		Robot karel = new Robot();
       
