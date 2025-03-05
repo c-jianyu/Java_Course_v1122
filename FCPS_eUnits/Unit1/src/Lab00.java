@@ -6,7 +6,7 @@ public class Lab00 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//565
+
 		Display.openWorld("../maps/first.map");
       Display.setSize(10,10);
       Display.setSpeed(10);
