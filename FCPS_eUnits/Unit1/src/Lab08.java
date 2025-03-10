@@ -1,7 +1,4 @@
-  	//Torbert, e-mail: smtorbert@fcps.edu
-	//version 4.16.2003
-
-   import edu.fcps.karel2.Robot;
+	import edu.fcps.karel2.Robot;
    import edu.fcps.karel2.Display;
    import javax.swing.JOptionPane;
     public class Lab08
@@ -25,7 +22,7 @@
          String filename = JOptionPane.showInputDialog("What robot world?");
          String type = JOptionPane.showInputDialog("What type of racer?");
       
-       Display.openWorld("maps/"+filename+".map");
+         Display.openWorld("C:\\Users\\\\user\\Documents\\GitHub\\Java_Course_v1122\\FCPS_eUnits\\Unit1\\maps\\"+filename+".map");
          Display.setSize(18, 16);
          Display.setSpeed(10);
       
