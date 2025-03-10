@@ -1,0 +1,10 @@
+
+public class StepClimber extends Climber{
+
+  public StepClimber(){
+
+  }
+
+  public StepClimber(int x){
+    super();
+  }
