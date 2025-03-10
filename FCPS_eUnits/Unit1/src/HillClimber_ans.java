@@ -1,5 +1,5 @@
 
-public class HillClimber extends Climber{
+public class HillClimber_ans extends Climber{
 
   public HillClimber(){
 
