@@ -1,10 +1,39 @@
 
 public class StepClimber_ans extends Climber{
 
-  public StepClimber(){
+    public StepClimber(){
+  
+    }
+  
+    public StepClimber(int x){
+      super();
+    }
 
-  }
-
-  public StepClimber(int x){
-    super();
-  }
+    public void climbUpRight()
+    {
+         turnLeft();
+         move();
+         turnRight();
+         move();
+    }
+    public void climbUpLeft()
+    {
+         turnRight();
+         move();
+         turnLeft();
+         move();
+    }
+    public void climbDownRight()
+    {
+         move();
+         turnRight();
+         move();
+         turnLeft();
+    }
+    public void climbDownLeft()
+    {
+         move();
+         turnLeft();
+         move();
+         turnRight();
+    }
