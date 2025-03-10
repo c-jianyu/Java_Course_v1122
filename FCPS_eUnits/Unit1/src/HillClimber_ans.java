@@ -6,7 +6,7 @@ public class HillClimber_ans extends Climber{
     }
     
     public HillClimber(int x){
-      super();
+      super(x);
     }
     
     public void climbUpRight()
