@@ -11,7 +11,7 @@ public class BoxTopRacer_ans extends Racer
 
     public void jumpRight()
     {
-         turnLeft();
+        turnLeft();
         while(!rightIsClear()){
             move();
         }
