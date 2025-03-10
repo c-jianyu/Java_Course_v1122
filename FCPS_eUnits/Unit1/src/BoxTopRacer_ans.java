@@ -17,6 +17,9 @@ public class BoxTopRacer_ans extends Racer
         }
         turnRight();
         move();
+        while(!rightIsClear()){
+            move();
+        }
         turnRight();
         while(frontIsClear()){
             move();
