@@ -27,7 +27,7 @@
       }
        public static void main(String[] args)
       {
-         Display.openWorld("maps/spiral.map");
+         Display.openWorld("C:\\Users\\user\\Documents\\GitHub\\Java_Course_v1122\\FCPS_eUnits\\Unit1\\maps\\spiral.map");
          Display.setSize(10, 10);
          Display.setSpeed(8);
          if(Math.random() < 0.5)
