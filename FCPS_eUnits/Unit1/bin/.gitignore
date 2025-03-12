@@ -4,6 +4,8 @@
 /Battleship$Handler2.class
 /Battleship.class
 /BattleshipDriver.class
+/BoxTopRacer.class
+/BoxTopRacer_ans.class
 /BucketPanel$Listener.class
 /BucketPanel.class
 /Bug.class
@@ -47,6 +49,8 @@
 /Gameboard15.class
 /Harvester.class
 /Heap Sort.class
+/HillClimber.class
+/HillClimber_ans.class
 /Insertion Sort.class
 /KarelPanel$Listener.class
 /KarelPanel.class
@@ -60,7 +64,10 @@
 /Lab05.class
 /Lab06.class
 /Lab07.class
+/Lab07_ans.class
 /Lab08.class
+/Lab09.class
+/Lab09_ans.class
 /Lab12.class
 /Lab13.class
 /Lab14.class
@@ -131,6 +138,9 @@
 /SortPanel.class
 /Sorter.class
 /SquareTurtle.class
+/SteepleChaseRacer.class
+/StepClimber.class
+/StepClimber_ans.class
 /StylePanel$Listener.class
 /StylePanel.class
 /Swimmer.class
@@ -152,10 +162,15 @@
 /tchaikovsky.txt
 /three.jpg
 /two.jpg
-/HillClimber.class
-/StepClimber.class
-/SteepChaseRacer.class
-/BoxTopRacer.class
-/SteepleChaseRacer.class
-/Lab09.class
-/Lab06_ans.class
+/Lab10.class
+/Lab11.class
+/Zero.class
+/One.class
+/Two.class
+/Three.class
+/Four.class
+/Five.class
+/Six.class
+/Seven.class
+/Eight.class
+/Nine.class
