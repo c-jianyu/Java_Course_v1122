@@ -6,20 +6,16 @@ public class Lab10 {
 		Display.openWorld("C:\\Users\\user\\Documents\\GitHub\\Java_Course_v1122\\FCPS_eUnits\\Unit1\\maps\\maze3.map");
         Display.setSize(10, 10);
         Display.setSpeed(10);
-        Athlete pete = new Athlete(1,1,Display.NORTH,Display.INFINITY);
-		
-        while (!pete.nextToABeeper()) {
-            if (pete.rightIsClear()) {
-            	pete.turnRight();
-            }
-    		if (pete.frontIsClear()) {
-    			pete.move();
-    		}
-    		if (!pete.rightIsClear() && !pete.frontIsClear()) {
-    			pete.turnLeft();
-    		}
-        	
+        mazePlayer pete = new mazePlayer(1,1,Display.NORTH,Display.INFINITY);
+
+        if (Math.random()>0.5) {
+        	pete.followWallsRight();
         }
+        else {
+        	pete.followWallsLeft();
+        }
+        
+        	
 	}
 
 }
