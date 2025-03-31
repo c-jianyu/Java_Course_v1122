@@ -1,15 +1,17 @@
-package Lab00;
+package Lab01;
 
 import javax.swing.JFrame;
 
-public class Driver00 {
+import Lab00.Panel00;
+
+public class Driver01 {
 
 	public static void main(String[] args) {
-		JFrame frame = new JFrame("Lab00");
-		frame.setSize(400, 225);
+		JFrame frame = new JFrame("Lab01");
+		frame.setSize(400, 400);
 		frame.setLocation(100, 50);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setContentPane(new Panel00());
+		frame.setContentPane(new Panel01());
 		frame.setVisible(true);
 
 	}
