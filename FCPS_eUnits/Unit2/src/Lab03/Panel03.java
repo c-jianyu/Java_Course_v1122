@@ -52,13 +52,10 @@
         	 buffer.drawLine(x, y, x1, y1);
          }
          
-         
-         
       	/*                      */
       	/* Your code goes here. */
       	/*                      */
       	/************************/
-         
          
          
       
