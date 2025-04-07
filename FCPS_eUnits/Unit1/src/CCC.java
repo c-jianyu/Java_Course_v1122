@@ -1,8 +1,8 @@
 import edu.fcps.Digit;
 
-public class Eight extends Digit implements Runnable{
+public class CCC extends Digit implements Runnable{
 
-	public Eight(int x, int y) {
+	public CCC(int x, int y) {
 		super(x, y);
 	}
 
@@ -12,9 +12,9 @@ public class Eight extends Digit implements Runnable{
 		segment2_On();
 		segment3_On();
 		segment4_On();
-		segment5_On();
-		segment6_On();
-		segment7_On();
+		segment5_Off();
+		segment6_Off();
+		segment7_Off();
 	}
 
 	@Override
@@ -23,9 +23,9 @@ public class Eight extends Digit implements Runnable{
 		segment2_On();
 		segment3_On();
 		segment4_On();
-		segment5_On();
-		segment6_On();
-		segment7_On();
+		segment5_Off();
+		segment6_Off();
+		segment7_Off();
 	}
 
 }
