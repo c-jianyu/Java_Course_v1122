@@ -25,7 +25,7 @@
          int yPos = (int)(Math.random()*(FRAME-100)+ 50);
          ball = new Ball(xPos, yPos, 50, Color.BLACK);
         
-         t = new Timer(5, new Listener());
+         t = new Timer(5, new Listener());//ms
          t.start();
       }
        public void paintComponent(Graphics g)

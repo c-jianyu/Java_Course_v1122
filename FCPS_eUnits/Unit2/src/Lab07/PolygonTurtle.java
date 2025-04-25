@@ -33,25 +33,9 @@
       {
       
          /************************/
-    	   for (int i=1;i<=mySides;i++) {
-    		   forward(mySize);
-    		   turnLeft(360/mySides);
-    	   }
-      	/************************/
-      
-      }
-       public void drawShape(int s)
-      {
-      
-         /************************/
-    	   for (int k=3;k<=s;k++) {
-        	   for (int i=1;i<=k;i++) {
-        		   forward(mySize);
-        		   turnLeft(360/k);
-        	   }
-    		   
-    	   }
-      	
+      	/*                      */
+      	/* Your code goes here. */
+      	/*                      */
       	/************************/
       
       }

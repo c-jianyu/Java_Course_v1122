@@ -35,14 +35,17 @@
       }
       public double getY()      
       { 
+          return myY;
          //_______________
       }
       public double getDiameter() 
       { 
+          return myDiameter;
          //_______________
       }
       public Color getColor() 
       { 
+          return myColor;
          //_______________
       }
       public double getRadius() 
@@ -54,8 +57,9 @@
       {
          myX = x;
       } 
-      public void setY(/*_________*/)
+      public void setY(double y/*_________*/)
       {
+          myY = y;
          //_______________
       } 
       public void setColor(Color c)

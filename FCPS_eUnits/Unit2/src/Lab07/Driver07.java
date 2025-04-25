@@ -16,12 +16,12 @@
          PolygonTurtle smidge = new PolygonTurtle(100.0, 3);
          smidge.setColor(Color.BLUE);
          smidge.setThickness(6);
-         //smidge.drawShape();
+         smidge.drawShape();
       
          /************************/
-         smidge = new PolygonTurtle(80, 3);
-         smidge.drawShape(5);
-      	
+      	/*                      */
+      	/* Your code goes here. */
+      	/*                      */
       	/************************/
       
       }

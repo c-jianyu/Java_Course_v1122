@@ -1,7 +1,5 @@
 	//Name______________________________ Date_____________
-   import javax.swing.Box.Filler;
-
-import edu.fcps.Turtle;
+   import edu.fcps.Turtle;
     public class SquareTurtle extends Turtle
    {
       private double mySize;
@@ -35,11 +33,11 @@ import edu.fcps.Turtle;
       }
        public void drawShape()
       {
+      
          /************************/
-    	   for (int i=0;i<4;i++) {
-        	   forward(mySize);
-    		   turnLeft(360/4);
-    	   }
+      	/*                      */
+      	/* Your code goes here. */
+      	/*                      */
       	/************************/
       
       }
