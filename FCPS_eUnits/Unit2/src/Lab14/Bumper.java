@@ -6,21 +6,71 @@
    {
     //private fields, all ints, for a Bumper
     //hint: the "location" of the bumper begins at its top left corner.      
-	 
+   	 private int myX;  
+	 private int myY;  
+	 private int myXWidth;  
+	 private int myYWidth;
+	 private Color myColor;
+
+	 private int x;
+	 private int y;
+	 private int width;
    
-   
-     //constructors
+     public int getWidth() {
+		return width;
+	}
+	public void setX(int x) {
+		this.x = x;
+	}
+	public void setY(int y) {
+		this.y = y;
+	}
+	public void setWidth(int width) {
+		this.width = width;
+	}
+	public void setColor(Color color) {
+		this.myColor = color;
+	}
+	//constructors
        public Bumper()         //default constructor
       {
-      
+    	   myX = 200;
+    	   myY = 200;
+    	   myXWidth = 10;
+    	   myYWidth = 70;
+    	   myColor = Color.blue;
       }
        public Bumper(int x, int y, int xWidth, int yWidth, Color c)
       {
-      
+    	   myX = x;
+    	   myY = y;
+    	   myXWidth = xWidth;
+    	   myYWidth = yWidth;
+    	   myColor = c;
       }
       
      // accessor methods  (one for each field)
-   
+       public int getX() {
+    	   return myX;
+       }
+       public int getY() {
+    	   return myY;
+       }
+       public int getXWidth() {
+    	   return myXWidth;
+       }
+       public int getYWidth() {
+    	   return myXWidth;
+       }
+       public Color getColor() {
+    	   return myColor;
+       }
+       public void setXWidth(int myXWidth) {
+    	   this.myXWidth = myXWidth;
+       }
+       public void setYWidth(int myYWidth) {
+    	   this.myYWidth = myYWidth;
+       }
      // modifier methods  (one for each field)
    
      // instance methods
@@ -28,7 +78,8 @@
         public void jump(int rightEdge, int bottomEdge)
       {
          // moves location to random (x, y) within the edges
-      
+            myX = (int) (Math.random()* (rightEdge-getXWidth()) + myXWidth/2);
+            myY = (int) (Math.random()* (bottomEdge-getYWidth()) + myYWidth/2);
       }
       
        // draws a rectangular bumper on the buffer

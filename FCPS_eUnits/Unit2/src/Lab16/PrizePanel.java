@@ -1,6 +1,7 @@
-   //Name:    Date:
+package Lab16;
    import javax.swing.*;
 
+//import PinballPanel.Listener;
 
 import java.awt.*;
    import java.awt.event.*;
@@ -23,18 +24,11 @@ import java.awt.*;
            myBuffer = myImage.getGraphics();
            myBuffer.setColor(BACKGROUND);
            myBuffer.fillRect(0, 0, FRAME,FRAME);
-           int xPos = (int) (Math.random()*(FRAME-100)+50);
-           int yPos = (int) (Math.random()*(FRAME-100)+50);
-           ball = new Ball(xPos, yPos, 50, Color.red);
-           xPos = (int) (Math.random()*(FRAME-100)+50);
-           yPos = (int) (Math.random()*(FRAME-100)+50);
-           pd = new Ball(xPos, yPos, 30, Color.yellow);
-
+           ball = new Ball(0, 0, 50, Color.red);
+           pd = new Ball(200, 200, 30, Color.yellow);
+           addMouseListener(new Mouse());
            t = new Timer(5, new Listener());//ms
            t.start();
-           addMouseListener(new Mouse());
-           addKeyListener(new Key());
-           setFocusable(true);
     	 //
       }
        public void paintComponent(Graphics g)
@@ -74,7 +68,7 @@ import java.awt.*;
       {
          return  	 Math.sqrt( Math.pow(x1-x2,2)+Math.pow(y1-y2,2)  );// enter the calculation here.
       }
-
+       
        private class Mouse extends MouseAdapter{
     	   public void mousePressed(MouseEvent e) {
     		   if (e.isControlDown()) {
@@ -88,48 +82,6 @@ import java.awt.*;
     		   else {
     			   pd.setX(e.getX());
     			   pd.setY(e.getY());
-    		   }
-    	   }
-       }
-
-       private class Key extends KeyAdapter{
-    	   public void keyPressed(KeyEvent e) {
-    		   if (e.getKeyCode()==KeyEvent.VK_UP) {
-    			   ball.setY(ball.getY()-20);
-    		   }
-    		   else if (e.getKeyCode()==KeyEvent.VK_DOWN) {
-    			   ball.setY(ball.getY()+20);
-    		   }
-    		   else if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
-    			   ball.setX(ball.getX()+20);
-    		   }
-    		   else if (e.getKeyCode()==KeyEvent.VK_LEFT) {
-    			   ball.setX(ball.getX()-20);
-    		   }
-
-    		   if (e.getKeyCode()==KeyEvent.VK_NUMPAD8) {
-    			   pd.setY(pd.getY()-10);
-    			   if(pd.getY()<=pd.getRadius()) {
-    				   pd.setY(pd.getDiameter());
-    			   }
-    		   }
-    		   else if (e.getKeyCode()==KeyEvent.VK_NUMPAD5) {
-    			   pd.setY(pd.getY()+10);
-    			   if(pd.getY()>=FRAME) {
-    				   pd.setY(FRAME-pd.getDiameter());
-    			   }
-    		   }
-    		   else if (e.getKeyCode()==KeyEvent.VK_NUMPAD6) {
-    			   pd.setX(pd.getX()+10);
-    			   if(pd.getX()>=FRAME) {
-    				   pd.setX(FRAME-pd.getDiameter());
-    			   }
-    		   }
-    		   else if (e.getKeyCode()==KeyEvent.VK_NUMPAD4) {
-    			   pd.setX(pd.getX()-10);
-    			   if(pd.getX()<=pd.getRadius()) {
-    				   pd.setX(pd.getDiameter());
-    			   }
     		   }
     	   }
        }
