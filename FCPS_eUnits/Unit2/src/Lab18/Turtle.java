@@ -5,13 +5,16 @@
 
     public class Turtle
    {
-      private static BufferedImage img;
+        private static BufferedImage img;
       private static int black = 0;
       private static int blue = 255;       // 2^8-1
       private static int green = 65280;    //(2^8-1)*2^8
       private static int red = 16711680;   //(2^8-1)*2^16
       private static int white = 16777215; // 2^24-1
       private double x,y,theta;            // what does a Turtle know?
+      
+      private int x1,y1;
+      
       static									 	 // a static initializer list
       {
          img = new BufferedImage(800,600,BufferedImage.TYPE_INT_RGB);
@@ -34,5 +37,14 @@
        public void forward(double r)
       {
          // Your code goes here!
+		   for(int i=0;i<=(int)r;i++) {
+			   x1=(int)(x+i*Math.cos(theta*Math.PI/180));
+			   y1=(int)(y+i*Math.sin(theta*Math.PI/180));
+			   img.setRGB(x1, y1, white);
+		   }
+		   
+		   
+		   x=(int)(x+r*Math.cos(theta*Math.PI/180));
+		   y=(int)(y+r*Math.sin(theta*Math.PI/180));
       }
    }
