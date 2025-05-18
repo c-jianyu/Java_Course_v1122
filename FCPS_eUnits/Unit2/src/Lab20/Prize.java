@@ -1,25 +1,14 @@
 package Lab20;
-   import javax.swing.*;
+import java.awt.Color;
 
-//import PinballPanel.Listener;
+class Prize extends Spot {
 
-import java.awt.*;
-   import java.awt.event.*;
-   import java.awt.image.*;
-    public class Prize
-   {
-        public Spot(int sx, int sy, int sr, Color sc){
-            x = sx;
-            y = sy;
-            r = sr;
-            myColor = sc;
-         }
-        public void lightup() {
-	    	
-	    }
-	     
-   }
-    
-    
-    
-    
+    // 屬性
+    public Prize(double x, double y, double r, Color c) {
+        super(x, y, r, c);
+    }
+
+    public void lightup() {
+        setMyColor(Color.YELLOW);
+    }
+}

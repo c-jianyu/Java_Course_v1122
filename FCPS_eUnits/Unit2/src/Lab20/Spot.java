@@ -1,79 +1,69 @@
 package Lab20;
-   import javax.swing.*;
+import java.awt.Color;
+import java.awt.Graphics;
 
-//import PinballPanel.Listener;
+public class Spot {
 
-import java.awt.*;
-   import java.awt.event.*;
-   import java.awt.image.*;
-    public class Spot extends JPanel
-   {
-     private double x,y,r;
-     private Color myColor;
-     
-     public Spot() {
-    	 x=200;
-    	 y=200;
-    	 r=25;
-    	 myColor=Color.red;
-     }
+    private double X, Y, R;
+    private Color myColor;
 
-     public Spot(double sx, double sy, double sr, Color sc){
-        x = sx;
-        y = sy;
-        r = sr;
-        myColor = sc;
-     }
-     
+    public Spot() {
+        X = 200;
+        Y = 200;
+        R = 25;
+        myColor = Color.RED;
+    }
 
-     public double getx(){ 
-        return x;
-     }
-     
-     public double gety(){ 
-         return y;
-     }
+    public Spot(double x, double y, double r, Color c) {
+        X = x;
+        Y = y;
+        R = r;
+        myColor = c;
+    }
 
-     public double getR(){ 
-        return r;
-     }
+    public double getX() {
+        return X;
+    }
 
-     public void setX(double sx){ 
-         x=sx;
-      }
+    public void setX(double x) {
+        X = x;
+    }
 
-     public void setY(double sy){ 
-         y=sy;
-      }
+    public double getY() {
+        return Y;
+    }
 
-     public void setR(double sr){ 
-         r=sr;
-      }
+    public void setY(double y) {
+        Y = y;
+    }
 
-     public Color getColor(){ 
-         return myColor;
-     }
-     
-     public void setMyColor(Color sc){ 
-         this.myColor=sc;
-     }
-     
-     public boolean intersect(Spot spot) {
-    	 double d=distance(x,y,spot.getx(),spot.gety());
-    	 return d<=(r+spot.getR());
-     }
-     
-     private double distance(double x1,double y1,double x2,double y2) {
-    	 return  	 Math.sqrt( Math.pow(x1-x2,2)+Math.pow(y1-y2,2)  );
-     }
-     
-     public void drawme(Graphics myBuffer) {
-    	 myBuffer.setColor(myColor);
-    	 myBuffer.fillOval((int)(getx()-getR()), (int)(gety()-getR()), (int)(getR()*2), (int)(getR()*2));
-     }
-     
-   }
-    
-    
-    
-    
+    public double getR() {
+        return R;
+    }
+
+    public void setR(double r) {
+        R = r;
+    }
+
+    public Color getMyColor() {
+        return myColor;
+    }
+
+    public void setMyColor(Color myColor) {
+        this.myColor = myColor;
+    }
+
+    public boolean intersect(Spot spot) {
+        double d = distance(X, Y, spot.getX(), spot.getY());
+        return (d <= (R + spot.getR()));
+    }
+
+    private double distance(double x1, double y1, double x2, double y2) {
+        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+    }
+
+    public void drawme(Graphics myBuffer) {
+        myBuffer.setColor(myColor);
+        myBuffer.fillOval((int) (getX() - getR()), (int) (getY() - getR()), (int) (getR() * 2), (int) (getR() * 2));
+    }
+}

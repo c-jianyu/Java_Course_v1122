@@ -19,13 +19,15 @@
          myImage =  new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
          myBuffer = myImage.getGraphics();
          myArray = new ImageIcon[4];
-         myArray[0] = new ImageIcon("karele.gif");   //east
-         myArray[1] = new ImageIcon("kareln.gif");   //north
-         myArray[2] = new ImageIcon("karelw.gif");   //west
-         myArray[3] = new ImageIcon("karels.gif");   //south
+         myArray[0] = new ImageIcon("C:\\Users\\user\\Documents\\NTUST\\Java_Course_v1122\\FCPS_eUnits\\Unit2\\src\\Lab15\\karele.gif");   //east
+         myArray[1] = new ImageIcon("C:\\Users\\user\\Documents\\NTUST\\Java_Course_v1122\\FCPS_eUnits\\Unit2\\src\\Lab15\\kareln.gif");   //north
+         myArray[2] = new ImageIcon("C:\\Users\\user\\Documents\\NTUST\\Java_Course_v1122\\FCPS_eUnits\\Unit2\\src\\Lab15\\karelw.gif");   //west
+         myArray[3] = new ImageIcon("C:\\Users\\user\\Documents\\NTUST\\Java_Course_v1122\\FCPS_eUnits\\Unit2\\src\\Lab15\\karels.gif");   //south
+         System.out.println(myArray[0].getImage().getWidth(null));
+         System.out.println(myArray[0].getImage().getHeight(null));
          dir = 0;     //start facing east
-         xPos = 5;    //starting xPos
-         yPos = HEIGHT - 3 - myArray[dir].getImage().getHeight(null); //starting yPos
+ 		 xPos = (17-Math.round(myArray[0].getImage().getWidth(null)/2));//起始X
+ 		 yPos = (373-Math.round(myArray[0].getImage().getHeight(null)/2));//起始Y
          Timer t = new Timer(250, new Listener());
          t.start();
       }
@@ -72,32 +74,32 @@
         		yPos = yPos + 28;
         		break;
             }
-            
-            if (yPos >= 381) {
+            //邊界x=17~377  y=9~373
+            if (yPos >= 381) {//朝南S(25,29)  左下
             	if (dir != 0) {
-            		xPos = 5;
-            		yPos = (388-myArray[0].getImage().getHeight(null));
+            		xPos = (17-Math.round(myArray[0].getImage().getWidth(null)/2));
+            		yPos = (373-Math.round(myArray[0].getImage().getHeight(null)/2));
             	}
             	dir = 0;
             }
-            if (xPos >= 395) {
+            if (xPos >= 395) {//朝東E(29,25)  右下
             	if (dir != 1) {
-            		xPos = (392-myArray[1].getImage().getWidth(null));
-            		yPos = (386-myArray[1].getImage().getHeight(null));
+            		xPos = (377-Math.round(myArray[1].getImage().getWidth(null)/2));
+            		yPos = (373-Math.round(myArray[1].getImage().getHeight(null)/2));
             	}
             	dir = 1;
             }
-            if (yPos <= -4) {
+            if (yPos <= -4) {//朝北N(25,29)  右上
             	if (dir != 2) {
-            		xPos = (390-myArray[2].getImage().getWidth(null));
-            		yPos = -4;
+            		xPos = (377-Math.round(myArray[2].getImage().getWidth(null)/2));
+            		yPos = (9-Math.round(myArray[2].getImage().getHeight(null)/2));
             	}
             	dir = 2;
             }
-            if ((xPos < -3)&&(dir !=0)) {
+            if ((xPos < -3)&&(dir !=0)) {//朝西W(29,25)  左上
             	if (dir != 3) {
-            		xPos = 3;
-            		yPos = -3;
+            		xPos = (17-Math.round(myArray[0].getImage().getWidth(null)/2));
+            		yPos = (9-Math.round(myArray[2].getImage().getHeight(null)/2));
             	}
             	dir = 3;
             }
