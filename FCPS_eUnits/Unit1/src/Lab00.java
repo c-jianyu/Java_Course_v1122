@@ -8,20 +8,20 @@ public class Lab00 {
 		// TODO Auto-generated method stub
 
 		Display.openWorld("C:\\Users\\user\\Documents\\GitHub\\Java_Course_v1122\\FCPS_eUnits\\Unit1\\maps\\first.map");
-      Display.setSize(10,10);
-      Display.setSpeed(10);
-      
+		Display.setSize(10,10);
+		Display.setSpeed(5);
+		  
 		Robot karel = new Robot();
-      
-      karel.move();
-      karel.pickBeeper();
-      karel.move();
-      karel.turnLeft();
-      karel.move();
-      karel.putBeeper();
-      karel.move();
-      karel.turnLeft();
-      karel.turnLeft();
+		  
+		karel.move();
+		karel.pickBeeper();
+		karel.move();
+		karel.turnLeft();
+		karel.move();
+		karel.putBeeper();
+		karel.move();
+		karel.turnLeft();
+		karel.turnLeft();
    
 	}
 

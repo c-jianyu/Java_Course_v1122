@@ -8,9 +8,9 @@ public class Lab03 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Display.openWorld("../maps/mountain.map");
+	  Display.openWorld("C:\\Users\\user\\Documents\\NTUST\\Java_Course_v1122\\FCPS_eUnits\\Unit1\\maps\\mountain.map");
       Display.setSize(16,16);
-      Display.setSpeed(5);
+      Display.setSpeed(8);
       
       Climber climber = new Climber(8);
       

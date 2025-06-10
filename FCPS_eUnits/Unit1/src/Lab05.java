@@ -2,21 +2,11 @@ import edu.fcps.karel2.Display;
 import edu.fcps.karel2.Robot;
 
 public class Lab05 {
-	public static void takeTheField(Athlete arg) {
-      arg.move();
-      arg.move();
-      arg.move();
-      arg.move();
-      arg.turnRight();
-      arg.move();
-      arg.move();
-   
-   }
    
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Display.openWorld("../maps/shuttle.map");
+		Display.openWorld("C:\\Users\\user\\Documents\\NTUST\\Java_Course_v1122\\FCPS_eUnits\\Unit1\\maps\\shuttle.map");
       Display.setSize(10,10);
       Display.setSpeed(10);
       

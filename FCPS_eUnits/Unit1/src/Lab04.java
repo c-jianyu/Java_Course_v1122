@@ -16,7 +16,7 @@ public class Lab04 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Display.openWorld("../maps/arena.map");
+	  Display.openWorld("C:\\Users\\user\\Documents\\NTUST\\Java_Course_v1122\\FCPS_eUnits\\Unit1\\maps\\arena.map");
       Display.setSize(10,10);
       Display.setSpeed(10);
       
