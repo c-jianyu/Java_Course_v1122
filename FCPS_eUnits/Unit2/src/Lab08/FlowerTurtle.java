@@ -1,7 +1,7 @@
 	//Name______________________________ Date_____________
    import edu.fcps.Turtle;
    import java.awt.Color;
-   public class FlowerTurtle extends Turtle
+   public class FlowerTurtle extends Turtle implements Runnable
    {
       private double mySize;
       private Color myColor;
@@ -24,52 +24,38 @@
       {
          myColor = c;
       }
-      private void drawPetals() //starts and ends at center facing north
+      private void drawPetals() //starts and ends at center facing north花朵
       {
-          super.setColor(myColor);
-          double interiorAngle = 360/30;
-          for(int i=1; i<=30;i++){
-             forward(mySize);
-             turnLeft(180);
-             forward(mySize);
-             turnLeft(180);
-             turnLeft(interiorAngle);
-          }
-      
-         /************************/
-      	/*                      */
-      	/* Your code goes here. */
-      	/*                      */
-      	/************************/
-      
+         super.setColor(myColor);
+         double interiorAngle = 360/30;
+         for(int i=1; i<=30;i++){
+            forward(mySize);
+            turnLeft(180);
+            forward(mySize);
+            turnLeft(180);
+            turnLeft(interiorAngle);
+         }
       }
-      private void drawStem() //starts at top of stem facing south, ends at bottom
+      private void drawStem() //starts at top of stem facing south, ends at bottom莖跟葉
       {
-          
-          setColor(Color.green);
-          super.setColor(myColor);
-          turnLeft(180);
-          forward(mySize*3);
-          turnLeft(180);
-          forward(mySize/3);
-          
-          turnLeft(60);
-          forward(mySize/2);
-          turnLeft(180);
-          forward(mySize/2);
-          turnLeft(60);
-          
-          turnLeft(15);
-          forward(mySize/1.2);
-          turnLeft(180);
-          forward(mySize/1.2);
       
-         /************************/
-      	/*                      */
-      	/* Your code goes here. */
-      	/*                      */
-      	/************************/
-      
+         setColor(Color.green);
+         super.setColor(myColor);
+         turnLeft(180);
+         forward(mySize*3);
+         turnLeft(180);
+         forward(mySize/3);
+         
+         turnLeft(60);
+         forward(mySize/2);
+         turnLeft(180);
+         forward(mySize/2);
+         turnLeft(60);
+         
+         turnLeft(15);
+         forward(mySize/1.2);
+         turnLeft(180);
+         forward(mySize/1.2);
       }
       public void drawShape()
       {
@@ -78,6 +64,6 @@
       }
       
       public void run(){
-          drawShape();
-       }
+         drawShape();
+      }
    }
