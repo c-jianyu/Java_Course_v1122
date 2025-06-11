@@ -75,6 +75,18 @@ import java.awt.*;
          return  	 Math.sqrt( Math.pow(x1-x2,2)+Math.pow(y1-y2,2)  );// enter the calculation here.
       }
 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        private class Mouse extends MouseAdapter{
     	   public void mousePressed(MouseEvent e) {
     		   if (e.isControlDown()) {
